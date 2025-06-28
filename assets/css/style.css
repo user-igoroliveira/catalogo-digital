@@ -128,6 +128,20 @@ main {
     /* Transição suave */
 }
 
+.font-preview-section {
+    text-align: center; /* Centraliza o texto e elementos inline/inline-block dentro desta seção */
+    padding: 20px; /* Mantém o padding existente, se houver */
+    max-width: 1200px; /* Mantém a largura máxima, se houver */
+    margin: 0 auto; /* Mantém o centralamento da própria seção, se houver */
+}
+
+/* Opcional: Se o parágrafo for muito longo e você quiser limitar a largura para melhor leitura,
+   mantendo-o centralizado. */
+.font-preview-section p {
+    max-width: 800px; /* Limita a largura do parágrafo */
+    margin: 10px auto 60px auto; /* Centraliza o parágrafo e adiciona margens */
+}
+
 /* --- ESTILOS DO CABEÇALHO GERAL --- */
 #main-header {
     display: flex; /* Alinha o logo e a navegação na mesma linha */

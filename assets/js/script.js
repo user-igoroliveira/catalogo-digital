@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Carregar o Cabeçalho (header.html)
-    fetch('../components/header.html')
+    fetch('/components/header.html')
         .then(response => response.text())
         .then(html => {
             document.getElementById('main-header').innerHTML = html;
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
 
         // 2. Carregar o Rodapé (footer.html)
-    fetch('../components/footer.html')
+    fetch('/components/footer.html')
         .then(response => response.text())
         .then(html => {
             // Certifique-se de que o elemento main-footer-placeholder existe no seu HTML principal
