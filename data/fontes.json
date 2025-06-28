@@ -1,0 +1,135 @@
+[
+  {
+    "id": "roboto-regular",
+    "name": "Roboto",
+    "category": "sans-serif",
+    "source": "local",
+    "variants": [
+      {"weight": "regular", "style": "normal", "file": "Roboto-Regular.ttf"}
+    ]
+  },
+  {
+    "id": "amazone-bt",
+    "name": "Amazone",
+    "category": "handwriting",
+    "source": "local",
+    "variants": [
+      {"weight": "regular", "style": "normal", "file": "amazone-bt.ttf"}
+    ]
+  },
+  {
+    "id": "playfairdisplay",
+    "name": "Playfair Display",
+    "category": "serif",
+    "source": "local",
+    "variants": [
+      {"weight": "regular", "style": "normal", "file": "PlayfairDisplay-Regular.ttf"},
+      {"weight": "bold", "style": "normal", "file": "PlayfairDisplay-Bold.ttf"}
+    ]
+  },
+  {
+    "id": "pacifico",
+    "name": "Pacifico",
+    "category": "handwriting",
+    "source": "google-fonts",
+    "importUrl": "https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+  },
+  {
+    "id": "oswald",
+    "name": "Oswald",
+    "category": "sans-serif",
+    "source": "google-fonts",
+    "importUrl": "https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+  },
+  {
+    "id": "pacifico",
+    "name": "Pacifico",
+    "category": "handwriting",
+    "source": "google-fonts",
+    "importUrl": "https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+  },
+  {
+    "id": "lato",
+    "name": "Lato",
+    "category": "sans-serif",
+    "source": "google-fonts",
+    "importUrl": "https://fonts.googleapis.com/css2?family=Lato:wght@100..900&display=swap"
+  },
+  {
+    "id": "montserrat",
+    "name": "Montserrat",
+    "category": "sans-serif",
+    "source": "google-fonts",
+    "importUrl": "https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+  },
+  {
+    "id": "roboto-mono",
+    "name": "Roboto Mono",
+    "category": "monospace",
+    "source": "google-fonts",
+    "importUrl": "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..900&display=swap"
+  },
+ {
+    "id": "open-sans",
+    "name": "Open Sans",
+    "category": "sans-serif",
+    "source": "google-fonts",
+    "importUrl": "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap"
+  },
+  {
+    "id": "source-sans-pro",
+    "name": "Source Sans Pro",
+    "category": "sans-serif",
+    "source": "google-fonts",
+    "importUrl": "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200..900&display=swap"
+  },
+  {
+    "id": "merriweather",
+    "name": "Merriweather",
+    "category": "serif",
+    "source": "google-fonts",
+    "importUrl": "https://fonts.googleapis.com/css2?family=Merriweather:wght@300..900&display=swap"
+  },
+  {
+    "id": "playfair-display",
+    "name": "Playfair Display",
+    "category": "serif",
+    "source": "google-fonts",
+    "importUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap"
+  },
+  {
+    "id": "raleway",
+    "name": "Raleway",
+    "category": "sans-serif",
+    "source": "google-fonts",
+    "importUrl": "https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap"
+  },
+  {
+    "id": "ubuntu",
+    "name": "Ubuntu",
+    "category": "sans-serif",
+    "source": "google-fonts",
+    "importUrl": "https://fonts.googleapis.com/css2?family=Ubuntu:wght@300..700&display=swap"
+  },
+  {
+    "id": "dancing-script",
+    "name": "Dancing Script",
+    "category": "handwriting",
+    "source": "google-fonts",
+    "importUrl": "https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+  },
+  {
+    "id": "caveat",
+    "name": "Caveat",
+    "category": "handwriting",
+    "source": "google-fonts",
+    "importUrl": "https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+  },
+  {
+    "id": "poppins",
+    "name": "Poppins",
+    "category": "sans-serif",
+    "source": "google-fonts",
+    "importUrl": "https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap"
+  }
+]

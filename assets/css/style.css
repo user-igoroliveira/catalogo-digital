@@ -1,0 +1,247 @@
+/* Importar fontes (se você estiver usando @font-face para fontes locais) */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/assets/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #757575;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- ESTILOS DE PAGINAÇÃO --- */
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 15px;
+    /* Espaço entre os elementos */
+}
+
+.pagination-controls button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.pagination-controls button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+#page-info {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #555;
+}
+
+.input-group {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#font-preview-text {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px 15px;
+    font-size: 1.1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.font-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.font-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.font-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+.font-card .font-category {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.font-card .font-preview-text {
+    font-size: 2.2em;
+    /* Tamanho maior para visualização */
+    word-wrap: break-word;
+    /* Garante que o texto quebre linhas se for longo */
+    margin: 0;
+    min-height: 80px;
+    /* Garante altura mínima para alinhamento */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+    padding: 10px 0;
+    transition: font-size 0.2s ease-in-out;
+    /* Transição suave */
+}
+
+/* --- ESTILOS DO MENU --- */
+.main-nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Para alinhar os itens na horizontal */
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Para quebrar linha em telas pequenas */
+}
+
+.main-nav ul li {
+    position: relative;
+    /* FUNDAMENTAL para o posicionamento do submenu */
+    margin: 0 15px;
+    /* Alinha o texto dos itens do menu principal ao centro, caso não seja flex item */
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Estilos para o submenu */
+.submenu {
+    display: none !important;
+    /* <-- ESSA É A REGRA CRUCIAL PARA ESCONDER */
+    position: absolute;
+    background-color: #444;
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+    min-width: 180px;
+    z-index: 1000;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Correção para alinhamento:
+       'left: 50%;' centraliza o ponto de origem do submenu no meio do item pai.
+       'transform: translateX(-50%);' move o submenu de volta para que seu centro
+       fique alinhado com o centro do item pai.
+    */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: left;
+}
+
+.submenu li {
+    margin: 0;
+    /* Remover margens extras em li do submenu */
+    width: 100%;
+    /* Garante que o item ocupe toda a largura do submenu */
+}
+
+.submenu li a {
+    padding: 10px 20px;
+    white-space: nowrap;
+    display: block;
+}
+
+/* Regra para mostrar o submenu ao passar o mouse */
+.has-submenu:hover>.submenu {
+    display: block !important;
+}
+
+/* Opcional: Indicador de submenu */
+.has-submenu>a::after {
+    content: ' \25BC';
+    font-size: 0.7em;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* Estilos para responsividade básica */
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav ul li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+        background-color: #555;
+        box-shadow: none;
+        border-radius: 0;
+        /* Remover o posicionamento absoluto em mobile, já que é static */
+        left: auto;
+        transform: none;
+        text-align: center;
+        /* Centralizar os itens do submenu em mobile */
+    }
+
+    .submenu li {
+        text-align: center;
+        /* Centralizar itens específicos do submenu em mobile */
+    }
+}
