@@ -128,10 +128,33 @@ main {
     /* Transição suave */
 }
 
+/* --- ESTILOS DO CABEÇALHO GERAL --- */
+#main-header {
+    display: flex; /* Alinha o logo e a navegação na mesma linha */
+    align-items: center; /* Alinha verticalmente o logo e a navegação */
+    justify-content: center; /* Espaça o logo e a navegação */
+    background-color: #333; /* Fundo do cabeçalho */
+    padding: 10px 20px; /* Ajuste o padding geral do cabeçalho conforme necessário */
+}
+
+.logo-link {
+    display: inline-block; /* Permite controlar largura e altura do link do logotipo */
+    margin-right: 20px; /* Espaçamento entre o logo e o menu */
+}
+
+.logo {
+    height: auto; /* Mantém a proporção da imagem */
+    width: auto; /* Inicializa a largura automaticamente */
+    max-height: 50px; /* Define uma altura máxima para o logo */
+    /* Ou, se preferir definir uma largura máxima (descomente e ajuste): */
+    /* max-width: 150px; */
+    display: block; /* Evita espaços extras abaixo da imagem */
+}
+
 /* --- ESTILOS DO MENU --- */
 .main-nav {
     background-color: #333;
-    padding: 10px 0;
+    padding: 8px 0;
 }
 
 .main-nav ul {
@@ -148,16 +171,17 @@ main {
 .main-nav ul li {
     position: relative;
     /* FUNDAMENTAL para o posicionamento do submenu */
-    margin: 0 15px;
+    margin: 0 10px;
     /* Alinha o texto dos itens do menu principal ao centro, caso não seja flex item */
 }
 
 .main-nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 8px 12px;
     display: block;
     transition: background-color 0.3s ease;
+    font-size: 0.9em;
 }
 
 .main-nav ul li a:hover {
@@ -173,8 +197,8 @@ main {
     background-color: #444;
     list-style: none;
     padding: 0;
-    margin-top: 5px;
-    min-width: 180px;
+    margin-top: 3px;
+    min-width: 160px;
     z-index: 1000;
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -196,9 +220,10 @@ main {
 }
 
 .submenu li a {
-    padding: 10px 20px;
+    padding: 8px 15px;
     white-space: nowrap;
     display: block;
+    font-size: 0.85em;
 }
 
 /* Regra para mostrar o submenu ao passar o mouse */
@@ -214,8 +239,210 @@ main {
     margin-left: 5px;
 }
 
+/* --- ESTILOS DO RODAPÉ (FOOTER) --- */
+#main-footer {
+    background-color: #222;
+    color: #bbb;
+    padding: 40px 20px;
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex; /* Para alinhar as QUATRO seções principais lado a lado */
+    flex-wrap: wrap; /* Para quebra de linha em telas menores */
+    justify-content: space-around; /* Distribui o espaço entre as seções */
+    max-width: 1200px; /* Largura máxima do conteúdo do rodapé */
+    margin: 0 auto;
+    gap: 25px; /* Espaço entre as seções principais (ajustado para 4 colunas) */
+}
+
+.footer-section {
+    flex: 1; /* Permite que cada seção cresça e encolha */
+    min-width: 220px; /* Largura mínima para cada seção antes de quebrar linha (ajustado para 4 colunas) */
+    padding: 15px;
+}
+
+.footer-section h2 {
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Estilos para a seção 'About' */
+.footer-section.about p {
+    margin-bottom: 15px;
+}
+
+.footer-section.about .contact-info {
+    margin-bottom: 15px;
+}
+
+.footer-section.about .contact-info .contact-link {
+    text-decoration: none;
+    color: #bbb;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.footer-section.about .contact-info .contact-link:hover {
+    color: #007bff;
+}
+
+.footer-section.about .contact-info .contact-link i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.social-media a {
+    color: #bbb;
+    font-size: 1.5em;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #007bff;
+}
+
+/* --- ESTILOS PARA a seção 'Links Rápidos' (nova seção própria) --- */
+.footer-section.links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section.links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section.links ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.footer-section.links ul li a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* --- ESTILOS PARA a seção 'Fale Conosco' (nova seção própria) --- */
+/* Esta seção pode usar os mesmos estilos base que a 'links' para listas e links,
+   ou você pode criar estilos específicos se tiver um formulário, por exemplo. */
+.footer-section.contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section.contact ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section.contact ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.footer-section.contact ul li a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* --- ESTILOS PARA a seção 'Horários de funcionamento' --- */
+.footer-section.hours p {
+    margin-bottom: 10px;
+}
+
+/* --- Rodapé Inferior (Direitos Autorais) --- */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    color: #aaa;
+    font-size: 0.8em;
+}
+
+/* --- Responsividade do Footer (ajustado para 4 colunas) --- */
+
+/* Para telas maiores que 992px, as 4 colunas deverão aparecer lado a lado.
+   Se a tela for menor, começaremos a ajustar. */
+@media (max-width: 992px) { /* Ex: Quebra de 4 para 2 colunas */
+    .footer-content {
+        justify-content: center; /* Centraliza as seções quando elas começam a quebrar */
+        gap: 20px; /* Reduz o gap entre as seções */
+    }
+
+    .footer-section {
+        min-width: 300px; /* Aumenta um pouco a largura mínima para 2 colunas */
+        width: 45%; /* Cada seção ocupa quase metade da largura */
+    }
+}
+
 /* Estilos para responsividade básica */
 @media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Empilha todas as seções verticalmente */
+        align-items: center; /* Centraliza as seções empilhadas */
+        text-align: center; /* Centraliza o texto em todas as seções */
+        gap: 30px; /* Espaço entre as seções principais empilhadas */
+    }
+
+    .footer-section {
+        width: 90%; /* As seções ocupam 90% da largura em mobile */
+        min-width: unset; /* Remove o min-width para mais flexibilidade em mobile */
+        padding: 0; /* Ajuste o padding para não criar muito espaço */
+    }
+
+    .footer-section h2 {
+        border-bottom: none;
+        padding-bottom: 0;
+        text-align: center;
+    }
+
+    .footer-section.about .contact-info .contact-link {
+        justify-content: center; /* Centraliza ícone e texto do contato em mobile */
+    }
+
+    .social-media a {
+        margin: 0 8px;
+    }
+
+    .footer-section.links ul li a,
+    .footer-section.contact ul li a {
+        padding: 5px 0; /* Ajusta padding para links em mobile */
+    }
+
+    .footer-section.hours p {
+        text-align: center;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+
+    #main-header {
+        flex-direction: column; /* Empilha logo e menu em telas menores */
+        align-items: center; /* Centraliza os itens */
+        padding: 10px; /* */
+    }
+
+    .logo-link {
+        margin-right: 0; /* Remove margem lateral em mobile */
+        margin-bottom: 10px; /* Espaço entre o logo e o menu em telas menores */
+    }
+
     .main-nav ul {
         flex-direction: column;
         align-items: center;

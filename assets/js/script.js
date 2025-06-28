@@ -7,7 +7,27 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
 
-    // 2. Lógica para carregar e exibir as fontes (apenas se os elementos existirem)
+        // 2. Carregar o Rodapé (footer.html)
+    fetch('../components/footer.html')
+        .then(response => response.text())
+        .then(html => {
+            // Certifique-se de que o elemento main-footer-placeholder existe no seu HTML principal
+            const mainFooterPlaceholder = document.getElementById('main-footer-placeholder');
+            if (mainFooterPlaceholder) {
+                mainFooterPlaceholder.innerHTML = html;
+
+                // Atualiza o ano no footer dinamicamente
+                const currentYearSpan = document.getElementById('current-year');
+                if (currentYearSpan) {
+                    currentYearSpan.textContent = new Date().getFullYear();
+                }
+            } else {
+                console.error('Elemento #main-footer-placeholder não encontrado no DOM.');
+            }
+        })
+        .catch(error => console.error('Erro ao carregar o rodapé:', error));
+
+    // 3. Lógica para carregar e exibir as fontes (apenas se os elementos existirem)
     const fontListContainer = document.getElementById('font-list-container');
     const fontPreviewInput = document.getElementById('font-preview-text');
 
