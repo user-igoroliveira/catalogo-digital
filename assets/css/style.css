@@ -34,7 +34,7 @@ main {
 
 .pagination-controls button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #67191C;
     color: white;
     border: none;
     border-radius: 30px;
@@ -44,7 +44,7 @@ main {
 }
 
 .pagination-controls button:hover:not(:disabled) {
-    background-color: #0056b3;
+    background-color: #67191C;
 }
 
 .pagination-controls button:disabled {
@@ -102,13 +102,13 @@ main {
 .font-card h3 {
     margin-top: 0;
     margin-bottom: 10px;
-    color: #0056b3;
+    color: #67191C;
 }
 
 .font-card .font-category {
     font-size: 0.9em;
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .font-card .font-preview-text {
@@ -138,8 +138,13 @@ main {
 /* Opcional: Se o parágrafo for muito longo e você quiser limitar a largura para melhor leitura,
    mantendo-o centralizado. */
 .font-preview-section p {
-    max-width: 800px; /* Limita a largura do parágrafo */
-    margin: 10px auto 60px auto; /* Centraliza o parágrafo e adiciona margens */
+    max-width: 1000px; /* Limita a largura do parágrafo */
+    margin: 5px auto 20px auto; /* Centraliza o parágrafo e adiciona margens */
+}
+
+.highlight-important {
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #67191C;    /* Define a cor vermelha (você pode escolher qualquer cor hexadecimal ou nome de cor) */
 }
 
 /* --- ESTILOS DO CABEÇALHO GERAL --- */
@@ -282,7 +287,7 @@ main {
     color: #fff;
     font-size: 1.2em;
     margin-bottom: 20px;
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid #67191C;
     padding-bottom: 10px;
     display: inline-block;
 }
@@ -306,12 +311,12 @@ main {
 }
 
 .footer-section.about .contact-info .contact-link:hover {
-    color: #007bff;
+    color: #67191C;
 }
 
 .footer-section.about .contact-info .contact-link i {
     margin-right: 10px;
-    color: #007bff;
+    color: #67191C;
 }
 
 .social-media a {
@@ -322,7 +327,7 @@ main {
 }
 
 .social-media a:hover {
-    color: #007bff;
+    color: #67191C;
 }
 
 /* --- ESTILOS PARA a seção 'Links Rápidos' (nova seção própria) --- */
@@ -344,7 +349,7 @@ main {
 }
 
 .footer-section.links ul li a:hover {
-    color: #007bff;
+    color: #67191C;
     text-decoration: underline;
 }
 
@@ -369,7 +374,7 @@ main {
 }
 
 .footer-section.contact ul li a:hover {
-    color: #007bff;
+    color: #67191C;
     text-decoration: underline;
 }
 
@@ -388,7 +393,168 @@ main {
     font-size: 0.8em;
 }
 
-/* --- Responsividade do Footer (ajustado para 4 colunas) --- */
+/* --- ESTILOS GERAIS DA SEÇÃO FAQ --- */
+.faq-section {
+    max-width: 900px;
+    margin: 40px auto; /* Centraliza a seção e adiciona espaço em cima/baixo */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center; /* Centraliza o título e a descrição */
+}
+
+.faq-main-title {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.faq-description {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* --- ESTILOS DO CONTÊINER DO ACORDEÃO --- */
+.faq-container {
+    text-align: left; /* Alinha o texto das perguntas/respostas à esquerda */
+}
+
+.faq-item {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.faq-item:last-child {
+    border-bottom: none; /* Remove a borda do último item */
+}
+
+/* --- ESTILOS DO BOTÃO DA PERGUNTA --- */
+.faq-question {
+    background-color: transparent;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: 600;
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex; /* Para alinhar o texto da pergunta e a seta */
+    justify-content: space-between; /* Espaça o texto e a seta */
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: #67191C; /* Cor ao passar o mouse */
+}
+
+.faq-question .arrow {
+    font-size: 0.9em;
+    margin-left: 10px;
+    transition: transform 0.3s ease; /* Transição para a rotação da seta */
+}
+
+/* --- ESTILOS DA RESPOSTA OCULTA --- */
+.faq-answer {
+    max-height: 0; /* Inicialmente oculta a resposta */
+    overflow: hidden; /* Garante que o conteúdo não vaze */
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Transição suave */
+    padding: 0 15px; /* Padding vertical inicial zero */
+}
+
+.faq-answer p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0 0 15px 0; /* Margem inferior para o parágrafo dentro da resposta */
+}
+
+/* --- ESTILOS QUANDO A PERGUNTA ESTÁ ATIVA/ABERTA --- */
+.faq-question.active {
+    color: #67191C; /* Cor da pergunta quando ativa */
+}
+
+.faq-question.active .arrow {
+    transform: rotate(180deg); /* Gira a seta para cima */
+}
+
+.faq-question.active + .faq-answer { /* Seleciona a resposta que vem logo após a pergunta ativa */
+    max-height: 300px; /* Um valor grande o suficiente para a resposta se expandir */
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* --- ESTILOS DA SEÇÃO PRINCIPAL DE CATEGORIAS (index.html) --- */
+.main-categories-section {
+    max-width: 1200px; /* Limita a largura da seção, ajuste conforme necessário */
+    margin: 40px auto; /* Centraliza a seção e adiciona margem acima/abaixo */
+    padding: 20px;
+    text-align: center; /* Centraliza o título e a descrição */
+}
+
+.main-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.main-description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* --- ESTILOS DO GRID DE CATEGORIAS --- */
+.category-grid {
+    display: grid;
+    /* Define o layout de grid */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* 3 colunas de no mínimo 280px, ou preenchendo o espaço disponível */
+    gap: 30px;
+    /* Espaço entre os cartões */
+    justify-content: center;
+    /* Centraliza os itens na grade, se houver espaço extra */
+    align-items: stretch; /* Garante que os itens tenham a mesma altura */
+}
+
+/* --- ESTILOS INDIVIDUAIS DO CARTÃO DE CATEGORIA --- */
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none; /* Remove sublinhado do link */
+    color: #333; /* Cor do texto do cartão */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Garante que a imagem não vaze */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+.category-card:hover {
+    transform: translateY(-5px); /* Eleva um pouco o cartão ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra mais intensa */
+}
+
+.category-card img {
+    width: 100%; /* A imagem ocupa toda a largura do cartão */
+    height: 200px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.category-card .card-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 15px 10px; /* Espaço ao redor do título */
+    color: #444; /* Cor mais escura para o título */
+    text-align: center;
+}
 
 /* Para telas maiores que 992px, as 4 colunas deverão aparecer lado a lado.
    Se a tela for menor, começaremos a ajustar. */
@@ -401,6 +567,19 @@ main {
     .footer-section {
         min-width: 300px; /* Aumenta um pouco a largura mínima para 2 colunas */
         width: 45%; /* Cada seção ocupa quase metade da largura */
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 ou 3 colunas em tablets */
+        gap: 20px;
+    }
+
+    .main-title {
+        font-size: 2em;
+    }
+
+    .main-description {
+        font-size: 1.1em;
     }
 }
 
@@ -484,5 +663,55 @@ main {
     .submenu li {
         text-align: center;
         /* Centralizar itens específicos do submenu em mobile */
+    }
+
+        .faq-section {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .faq-main-title {
+        font-size: 1.8em;
+    }
+
+    .faq-description {
+        font-size: 0.95em;
+        margin-bottom: 20px;
+    }
+
+    .faq-question {
+        font-size: 1em;
+        padding: 10px 0;
+    }
+
+    .faq-answer {
+        padding: 0 10px;
+    }
+
+    .faq-question.active + .faq-answer {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        gap: 20px;
+    }
+
+    .main-categories-section {
+        margin: 20px 15px; /* Margem ajustada para mobile */
+        padding: 15px;
+    }
+
+    .main-title {
+        font-size: 1.8em;
+    }
+
+    .main-description {
+        font-size: 1em;
+    }
+
+    .category-card img {
+        height: 180px; /* Altura ligeiramente menor para imagens em mobile */
     }
 }

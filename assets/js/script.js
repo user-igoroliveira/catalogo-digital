@@ -130,6 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+
+
         // Event Listeners para os botões de paginação
         if (prevPageBtn) { // Verifique se o botão existe antes de adicionar o listener
             prevPageBtn.addEventListener('click', () => {
@@ -162,3 +164,20 @@ document.addEventListener('DOMContentLoaded', () => {
         fetchAllFonts();
     } // Fim da condição que verifica se os elementos das fontes existem
 });
+
+// 4. Lógica para o Acordeão do FAQ (esta seção já estava corretamente fora do bloco das fontes)
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    if (faqQuestions.length > 0) {
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                if (question.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                } else {
+                    answer.style.maxHeight = '0';
+                }
+            });
+        });
+    }
