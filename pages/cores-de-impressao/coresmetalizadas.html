@@ -1,25 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cores Metalizadas</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body>
+  </head>
+  <body class="metalized-colors-page">
     <header id="main-header"></header>
     <main>
-        <h1>Bem-vindo à página de Cores Metalizadas</h1>
-        <p>Aqui você encontrará informações sobre cores de impressão metalizadas.</p>
+      <section class="main-categories-section">
+        <h1 class="main-title">Catálogo de Cores Metalizadas</h1>
+        <p class="main-description">Passe o mouse sobre as cores para ver o efeito metalizado!</p>
+
+        <div class="category-grid">
+          <div class="category-card metalized-card">
+            <img src="/assets/img/cores-metalizadas/ouro-nobre.png" alt="Cor Metalizada Ouro" data-gif-src="/assets/img/cores-metalizadas/ouro-nobre.gif" />
+            <p class="card-title">Ouro Nobre</p>
+          </div>
+
+          <div class="category-card metalized-card">
+            <img src="/assets/img/cores-metalizadas/prata.png" alt="Cor Metalizada Prata" data-gif-src="/assets/img/cores-metalizadas/prata.gif" />
+            <p class="card-title">Prata</p>
+          </div>
+
+          <div class="category-card metalized-card">
+            <img src="/assets/img/cores-metalizadas/rose.png" alt="Cor Metalizada Rosé" data-gif-src="/assets/img/cores-metalizadas/rose.gif" />
+            <p class="card-title">Rosê</p>
+          </div>
+
+          <div class="category-card metalized-card">
+            <img src="/assets/img/cores-metalizadas/bronze.png" alt="Cor Metalizada Bronze" data-gif-src="/assets/img/cores-metalizadas/bronze.gif" />
+            <p class="card-title">Bronze</p>
+          </div>
+
+          <div class="category-card metalized-card">
+            <img src="/assets/img/cores-metalizadas/ouro-velho.png" alt="Cor Metalizada Bronze" data-gif-src="/assets/img/cores-metalizadas/ouro-velho.gif" />
+            <p class="card-title">Bronze</p>
+          </div>
+
+          <div class="category-card metalized-card">
+            <img src="/assets/img/cores-metalizadas/bronze.png" alt="Cor Metalizada Bronze" data-gif-src="/assets/img/cores-metalizadas/bronze.gif" />
+            <p class="card-title">Bronze</p>
+          </div>
+
+          <div class="category-card metalized-card">
+            <img src="/assets/img/cores-metalizadas/bronze.png" alt="Cor Metalizada Bronze" data-gif-src="/assets/img/cores-metalizadas/bronze.gif" />
+            <p class="card-title">Bronze</p>
+          </div>
+
+          <div class="category-card metalized-card">
+            <img src="/assets/img/cores-metalizadas/bronze.png" alt="Cor Metalizada Bronze" data-gif-src="/assets/img/cores-metalizadas/bronze.gif" />
+            <p class="card-title">Bronze</p>
+          </div>
+        </div>
+      </section>
+      <div class="pagination-controls">
+        <button id="prev-page-btn" disabled>&laquo;</button>
+        <span id="page-info">Página 1 de 1</span>
+        <button id="next-page-btn" disabled>&raquo;</button>
+      </div>
     </main>
+
+    <div class="lightbox-overlay" id="lightboxOverlay">
+      <div class="lightbox-content">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img src="" alt="Imagem ampliada" class="lightbox-img" id="lightboxImage" />
+      </div>
+    </div>
+
     <footer id="main-footer-placeholder"></footer>
     <script src="/assets/js/script.js"></script>
-</body>
-
+  </body>
 </html>

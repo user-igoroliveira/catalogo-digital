@@ -1,717 +1,830 @@
 /* Importar fontes (se você estiver usando @font-face para fontes locais) */
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('/assets/fonts/Roboto-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Roboto';
+  src: url('/assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
-    font-size: 15px;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #757575;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #757575;
 }
 
 main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* --- ESTILOS DE PAGINAÇÃO --- */
 .pagination-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    gap: 15px;
-    /* Espaço entre os elementos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 15px;
+  /* Espaço entre os elementos */
 }
 
 .pagination-controls button {
-    padding: 10px 20px;
-    background-color: #67191C;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  background-color: #67191c;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
 }
 
 .pagination-controls button:hover:not(:disabled) {
-    background-color: #67191C;
+  background-color: #67191c;
 }
 
 .pagination-controls button:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-    opacity: 0.7;
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.7;
 }
 
 #page-info {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #555;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #555;
 }
 
 .input-group {
-    margin-bottom: 30px;
-    text-align: center;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .input-group label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1.2em;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 #font-preview-text {
-    width: 80%;
-    max-width: 500px;
-    padding: 10px 15px;
-    font-size: 1.1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 500px;
+  padding: 10px 15px;
+  font-size: 1.1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .font-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .font-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .font-card h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #67191C;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #67191c;
 }
 
 .font-card .font-category {
-    font-size: 0.9em;
-    color: #666;
-    margin-bottom: 5px;
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 5px;
 }
 
 .font-card .font-preview-text {
-    font-size: 2.2em;
-    /* Tamanho maior para visualização */
-    word-wrap: break-word;
-    /* Garante que o texto quebre linhas se for longo */
-    margin: 0;
-    min-height: 80px;
-    /* Garante altura mínima para alinhamento */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1.2;
-    padding: 10px 0;
-    transition: font-size 0.2s ease-in-out;
-    /* Transição suave */
+  font-size: 2.2em;
+  /* Tamanho maior para visualização */
+  word-wrap: break-word;
+  /* Garante que o texto quebre linhas se for longo */
+  margin: 0;
+  min-height: 80px;
+  /* Garante altura mínima para alinhamento */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  padding: 10px 0;
+  transition: font-size 0.2s ease-in-out;
+  /* Transição suave */
 }
 
 .font-preview-section {
-    text-align: center; /* Centraliza o texto e elementos inline/inline-block dentro desta seção */
-    padding: 20px; /* Mantém o padding existente, se houver */
-    max-width: 1200px; /* Mantém a largura máxima, se houver */
-    margin: 0 auto; /* Mantém o centralamento da própria seção, se houver */
+  text-align: center; /* Centraliza o texto e elementos inline/inline-block dentro desta seção */
+  padding: 20px; /* Mantém o padding existente, se houver */
+  max-width: 1200px; /* Mantém a largura máxima, se houver */
+  margin: 0 auto; /* Mantém o centralamento da própria seção, se houver */
 }
 
 /* Opcional: Se o parágrafo for muito longo e você quiser limitar a largura para melhor leitura,
    mantendo-o centralizado. */
 .font-preview-section p {
-    max-width: 1000px; /* Limita a largura do parágrafo */
-    margin: 5px auto 20px auto; /* Centraliza o parágrafo e adiciona margens */
+  max-width: 1000px; /* Limita a largura do parágrafo */
+  margin: 5px auto 20px auto; /* Centraliza o parágrafo e adiciona margens */
 }
 
 .highlight-important {
-    font-weight: bold; /* Deixa o texto em negrito */
-    color: #67191C;    /* Define a cor vermelha (você pode escolher qualquer cor hexadecimal ou nome de cor) */
+  font-weight: bold; /* Deixa o texto em negrito */
+  color: #67191c; /* Define a cor vermelha (você pode escolher qualquer cor hexadecimal ou nome de cor) */
 }
 
 /* --- ESTILOS DO CABEÇALHO GERAL --- */
 #main-header {
-    display: flex; /* Alinha o logo e a navegação na mesma linha */
-    align-items: center; /* Alinha verticalmente o logo e a navegação */
-    justify-content: center; /* Espaça o logo e a navegação */
-    background-color: #333; /* Fundo do cabeçalho */
-    padding: 10px 20px; /* Ajuste o padding geral do cabeçalho conforme necessário */
+  display: flex; /* Alinha o logo e a navegação na mesma linha */
+  align-items: center; /* Alinha verticalmente o logo e a navegação */
+  justify-content: center; /* Espaça o logo e a navegação */
+  background-color: #333; /* Fundo do cabeçalho */
+  padding: 10px 20px; /* Ajuste o padding geral do cabeçalho conforme necessário */
 }
 
 .logo-link {
-    display: inline-block; /* Permite controlar largura e altura do link do logotipo */
-    margin-right: 20px; /* Espaçamento entre o logo e o menu */
+  display: inline-block; /* Permite controlar largura e altura do link do logotipo */
+  margin-right: 20px; /* Espaçamento entre o logo e o menu */
 }
 
 .logo {
-    height: auto; /* Mantém a proporção da imagem */
-    width: auto; /* Inicializa a largura automaticamente */
-    max-height: 50px; /* Define uma altura máxima para o logo */
-    /* Ou, se preferir definir uma largura máxima (descomente e ajuste): */
-    /* max-width: 150px; */
-    display: block; /* Evita espaços extras abaixo da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  width: auto; /* Inicializa a largura automaticamente */
+  max-height: 50px; /* Define uma altura máxima para o logo */
+  /* Ou, se preferir definir uma largura máxima (descomente e ajuste): */
+  /* max-width: 150px; */
+  display: block; /* Evita espaços extras abaixo da imagem */
 }
 
 /* --- ESTILOS DO MENU --- */
 .main-nav {
-    background-color: #333;
-    padding: 8px 0;
+  background-color: #333;
+  padding: 8px 0;
 }
 
 .main-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    /* Para alinhar os itens na horizontal */
-    justify-content: center;
-    flex-wrap: wrap;
-    /* Para quebrar linha em telas pequenas */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  /* Para alinhar os itens na horizontal */
+  justify-content: center;
+  flex-wrap: wrap;
+  /* Para quebrar linha em telas pequenas */
 }
 
 .main-nav ul li {
-    position: relative;
-    /* FUNDAMENTAL para o posicionamento do submenu */
-    margin: 0 10px;
-    /* Alinha o texto dos itens do menu principal ao centro, caso não seja flex item */
+  position: relative;
+  /* FUNDAMENTAL para o posicionamento do submenu */
+  margin: 0 10px;
+  /* Alinha o texto dos itens do menu principal ao centro, caso não seja flex item */
 }
 
 .main-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 12px;
-    display: block;
-    transition: background-color 0.3s ease;
-    font-size: 0.9em;
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+  transition: background-color 0.3s ease;
+  font-size: 0.9em;
 }
 
 .main-nav ul li a:hover {
-    background-color: #555;
-    border-radius: 4px;
+  background-color: #555;
+  border-radius: 4px;
 }
 
 /* Estilos para o submenu */
 .submenu {
-    display: none !important;
-    /* <-- ESSA É A REGRA CRUCIAL PARA ESCONDER */
-    position: absolute;
-    background-color: #444;
-    list-style: none;
-    padding: 0;
-    margin-top: 3px;
-    min-width: 160px;
-    z-index: 1000;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Correção para alinhamento:
+  display: none !important;
+  /* <-- ESSA É A REGRA CRUCIAL PARA ESCONDER */
+  position: absolute;
+  background-color: #444;
+  list-style: none;
+  padding: 0;
+  margin-top: 3px;
+  min-width: 160px;
+  z-index: 1000;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Correção para alinhamento:
        'left: 50%;' centraliza o ponto de origem do submenu no meio do item pai.
        'transform: translateX(-50%);' move o submenu de volta para que seu centro
        fique alinhado com o centro do item pai.
     */
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: left;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: left;
 }
 
 .submenu li {
-    margin: 0;
-    /* Remover margens extras em li do submenu */
-    width: 100%;
-    /* Garante que o item ocupe toda a largura do submenu */
+  margin: 0;
+  /* Remover margens extras em li do submenu */
+  width: 100%;
+  /* Garante que o item ocupe toda a largura do submenu */
 }
 
 .submenu li a {
-    padding: 8px 15px;
-    white-space: nowrap;
-    display: block;
-    font-size: 0.85em;
+  padding: 8px 15px;
+  white-space: nowrap;
+  display: block;
+  font-size: 0.85em;
 }
 
 /* Regra para mostrar o submenu ao passar o mouse */
-.has-submenu:hover>.submenu {
-    display: block !important;
+.has-submenu:hover > .submenu {
+  display: block !important;
 }
 
 /* Opcional: Indicador de submenu */
-.has-submenu>a::after {
-    content: ' \25BC';
-    font-size: 0.7em;
-    vertical-align: middle;
-    margin-left: 5px;
+.has-submenu > a::after {
+  content: ' \25BC';
+  font-size: 0.7em;
+  vertical-align: middle;
+  margin-left: 5px;
 }
 
 /* --- ESTILOS DO RODAPÉ (FOOTER) --- */
 #main-footer {
-    background-color: #222;
-    color: #bbb;
-    padding: 40px 20px;
-    font-size: 0.9em;
-    line-height: 1.6;
-    margin-top: 50px;
+  background-color: #222;
+  color: #bbb;
+  padding: 40px 20px;
+  font-size: 0.9em;
+  line-height: 1.6;
+  margin-top: 50px;
 }
 
 .footer-content {
-    display: flex; /* Para alinhar as QUATRO seções principais lado a lado */
-    flex-wrap: wrap; /* Para quebra de linha em telas menores */
-    justify-content: space-around; /* Distribui o espaço entre as seções */
-    max-width: 1200px; /* Largura máxima do conteúdo do rodapé */
-    margin: 0 auto;
-    gap: 25px; /* Espaço entre as seções principais (ajustado para 4 colunas) */
+  display: flex; /* Para alinhar as QUATRO seções principais lado a lado */
+  flex-wrap: wrap; /* Para quebra de linha em telas menores */
+  justify-content: space-around; /* Distribui o espaço entre as seções */
+  max-width: 1200px; /* Largura máxima do conteúdo do rodapé */
+  margin: 0 auto;
+  gap: 25px; /* Espaço entre as seções principais (ajustado para 4 colunas) */
 }
 
 .footer-section {
-    flex: 1; /* Permite que cada seção cresça e encolha */
-    min-width: 220px; /* Largura mínima para cada seção antes de quebrar linha (ajustado para 4 colunas) */
-    padding: 15px;
+  flex: 1; /* Permite que cada seção cresça e encolha */
+  min-width: 220px; /* Largura mínima para cada seção antes de quebrar linha (ajustado para 4 colunas) */
+  padding: 15px;
 }
 
 .footer-section h2 {
-    color: #fff;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #67191C;
-    padding-bottom: 10px;
-    display: inline-block;
+  color: #fff;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #67191c;
+  padding-bottom: 10px;
+  display: inline-block;
 }
 
 /* Estilos para a seção 'About' */
 .footer-section.about p {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .footer-section.about .contact-info {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .footer-section.about .contact-info .contact-link {
-    text-decoration: none;
-    color: #bbb;
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #bbb;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
 }
 
 .footer-section.about .contact-info .contact-link:hover {
-    color: #67191C;
+  color: #67191c;
 }
 
 .footer-section.about .contact-info .contact-link i {
-    margin-right: 10px;
-    color: #67191C;
+  margin-right: 10px;
+  color: #67191c;
 }
 
 .social-media a {
-    color: #bbb;
-    font-size: 1.5em;
-    margin-right: 15px;
-    transition: color 0.3s ease;
+  color: #bbb;
+  font-size: 1.5em;
+  margin-right: 15px;
+  transition: color 0.3s ease;
 }
 
 .social-media a:hover {
-    color: #67191C;
+  color: #67191c;
 }
 
 /* --- ESTILOS PARA a seção 'Links Rápidos' (nova seção própria) --- */
 .footer-section.links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-section.links ul li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-section.links ul li a {
-    color: #bbb;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    display: block;
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: block;
 }
 
 .footer-section.links ul li a:hover {
-    color: #67191C;
-    text-decoration: underline;
+  color: #67191c;
+  text-decoration: underline;
 }
 
 /* --- ESTILOS PARA a seção 'Fale Conosco' (nova seção própria) --- */
 /* Esta seção pode usar os mesmos estilos base que a 'links' para listas e links,
    ou você pode criar estilos específicos se tiver um formulário, por exemplo. */
 .footer-section.contact ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-section.contact ul li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-section.contact ul li a {
-    color: #bbb;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    display: block;
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: block;
 }
 
 .footer-section.contact ul li a:hover {
-    color: #67191C;
-    text-decoration: underline;
+  color: #67191c;
+  text-decoration: underline;
 }
 
 /* --- ESTILOS PARA a seção 'Horários de funcionamento' --- */
 .footer-section.hours p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /* --- Rodapé Inferior (Direitos Autorais) --- */
 .footer-bottom {
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
-    border-top: 1px solid #444;
-    color: #aaa;
-    font-size: 0.8em;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  color: #aaa;
+  font-size: 0.8em;
 }
 
 /* --- ESTILOS GERAIS DA SEÇÃO FAQ --- */
 .faq-section {
-    max-width: 900px;
-    margin: 40px auto; /* Centraliza a seção e adiciona espaço em cima/baixo */
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    text-align: center; /* Centraliza o título e a descrição */
+  max-width: 900px;
+  margin: 40px auto; /* Centraliza a seção e adiciona espaço em cima/baixo */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center; /* Centraliza o título e a descrição */
 }
 
 .faq-main-title {
-    font-size: 2.2em;
-    color: #333;
-    margin-bottom: 10px;
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 10px;
 }
 
 .faq-description {
-    font-size: 1.1em;
-    color: #666;
-    margin-bottom: 30px;
-    line-height: 1.5;
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.5;
 }
 
 /* --- ESTILOS DO CONTÊINER DO ACORDEÃO --- */
 .faq-container {
-    text-align: left; /* Alinha o texto das perguntas/respostas à esquerda */
+  text-align: left; /* Alinha o texto das perguntas/respostas à esquerda */
 }
 
 .faq-item {
-    border-bottom: 1px solid #eee;
-    padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
 }
 
 .faq-item:last-child {
-    border-bottom: none; /* Remove a borda do último item */
+  border-bottom: none; /* Remove a borda do último item */
 }
 
 /* --- ESTILOS DO BOTÃO DA PERGUNTA --- */
 .faq-question {
-    background-color: transparent;
-    color: #333;
-    font-size: 1.1em;
-    font-weight: 600;
-    width: 100%;
-    padding: 15px 0;
-    border: none;
-    text-align: left;
-    cursor: pointer;
-    display: flex; /* Para alinhar o texto da pergunta e a seta */
-    justify-content: space-between; /* Espaça o texto e a seta */
-    align-items: center;
-    transition: color 0.3s ease;
+  background-color: transparent;
+  color: #333;
+  font-size: 1.1em;
+  font-weight: 600;
+  width: 100%;
+  padding: 15px 0;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex; /* Para alinhar o texto da pergunta e a seta */
+  justify-content: space-between; /* Espaça o texto e a seta */
+  align-items: center;
+  transition: color 0.3s ease;
 }
 
 .faq-question:hover {
-    color: #67191C; /* Cor ao passar o mouse */
+  color: #67191c; /* Cor ao passar o mouse */
 }
 
 .faq-question .arrow {
-    font-size: 0.9em;
-    margin-left: 10px;
-    transition: transform 0.3s ease; /* Transição para a rotação da seta */
+  font-size: 0.9em;
+  margin-left: 10px;
+  transition: transform 0.3s ease; /* Transição para a rotação da seta */
 }
 
 /* --- ESTILOS DA RESPOSTA OCULTA --- */
 .faq-answer {
-    max-height: 0; /* Inicialmente oculta a resposta */
-    overflow: hidden; /* Garante que o conteúdo não vaze */
-    transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Transição suave */
-    padding: 0 15px; /* Padding vertical inicial zero */
+  max-height: 0; /* Inicialmente oculta a resposta */
+  overflow: hidden; /* Garante que o conteúdo não vaze */
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Transição suave */
+  padding: 0 15px; /* Padding vertical inicial zero */
 }
 
 .faq-answer p {
-    color: #555;
-    line-height: 1.6;
-    margin: 0 0 15px 0; /* Margem inferior para o parágrafo dentro da resposta */
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 15px 0; /* Margem inferior para o parágrafo dentro da resposta */
 }
 
 /* --- ESTILOS QUANDO A PERGUNTA ESTÁ ATIVA/ABERTA --- */
 .faq-question.active {
-    color: #67191C; /* Cor da pergunta quando ativa */
+  color: #67191c; /* Cor da pergunta quando ativa */
 }
 
 .faq-question.active .arrow {
-    transform: rotate(180deg); /* Gira a seta para cima */
+  transform: rotate(180deg); /* Gira a seta para cima */
 }
 
-.faq-question.active + .faq-answer { /* Seleciona a resposta que vem logo após a pergunta ativa */
-    max-height: 300px; /* Um valor grande o suficiente para a resposta se expandir */
-    padding-top: 15px;
-    padding-bottom: 15px;
+.faq-question.active + .faq-answer {
+  /* Seleciona a resposta que vem logo após a pergunta ativa */
+  max-height: 300px; /* Um valor grande o suficiente para a resposta se expandir */
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 /* --- ESTILOS DA SEÇÃO PRINCIPAL DE CATEGORIAS (index.html) --- */
 .main-categories-section {
-    max-width: 1200px; /* Limita a largura da seção, ajuste conforme necessário */
-    margin: 40px auto; /* Centraliza a seção e adiciona margem acima/abaixo */
-    padding: 20px;
-    text-align: center; /* Centraliza o título e a descrição */
+  max-width: 1200px; /* Limita a largura da seção, ajuste conforme necessário */
+  margin: 40px auto; /* Centraliza a seção e adiciona margem acima/abaixo */
+  padding: 20px;
+  text-align: center; /* Centraliza o título e a descrição */
 }
 
 .main-title {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 15px;
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 15px;
 }
 
 .main-description {
-    font-size: 1.2em;
-    color: #666;
-    margin-bottom: 40px;
-    line-height: 1.6;
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.6;
 }
 
 /* --- ESTILOS DO GRID DE CATEGORIAS --- */
 .category-grid {
-    display: grid;
-    /* Define o layout de grid */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    /* 3 colunas de no mínimo 280px, ou preenchendo o espaço disponível */
-    gap: 30px;
-    /* Espaço entre os cartões */
-    justify-content: center;
-    /* Centraliza os itens na grade, se houver espaço extra */
-    align-items: stretch; /* Garante que os itens tenham a mesma altura */
+  display: grid;
+  /* Define o layout de grid */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* 3 colunas de no mínimo 280px, ou preenchendo o espaço disponível */
+  gap: 30px;
+  /* Espaço entre os cartões */
+  justify-content: center;
+  /* Centraliza os itens na grade, se houver espaço extra */
+  align-items: stretch; /* Garante que os itens tenham a mesma altura */
 }
 
 /* --- ESTILOS INDIVIDUAIS DO CARTÃO DE CATEGORIA --- */
 .category-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none; /* Remove sublinhado do link */
-    color: #333; /* Cor do texto do cartão */
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Garante que a imagem não vaze */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito suave ao passar o mouse */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none; /* Remove sublinhado do link */
+  color: #333; /* Cor do texto do cartão */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Garante que a imagem não vaze */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito suave ao passar o mouse */
 }
 
 .category-card:hover {
-    transform: translateY(-5px); /* Eleva um pouco o cartão ao passar o mouse */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra mais intensa */
+  transform: translateY(-5px); /* Eleva um pouco o cartão ao passar o mouse */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra mais intensa */
 }
 
 .category-card img {
-    width: 100%; /* A imagem ocupa toda a largura do cartão */
-    height: 200px; /* Altura fixa para a imagem */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+  width: 100%; /* A imagem ocupa toda a largura do cartão */
+  height: 200px; /* Altura fixa para a imagem */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .category-card .card-title {
-    font-size: 1.2em;
-    font-weight: 600;
-    margin: 15px 10px; /* Espaço ao redor do título */
-    color: #444; /* Cor mais escura para o título */
-    text-align: center;
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 15px 10px; /* Espaço ao redor do título */
+  color: #444; /* Cor mais escura para o título */
+  text-align: center;
+}
+
+/* Regra ESPECÍFICA para a página de Cores de Impressão */
+/* Esta regra SOBRESCEVE o object-fit: cover para esta página, mostrando a imagem inteira */
+body.colors-page .category-card.image-card img {
+  object-fit: contain; /* A imagem aparece inteira, com "letterboxing" se a proporção não for perfeita */
+}
+
+/* --- ESTILOS DO CATÁLOGO DE CORES METALIZADAS (NOVO) --- */
+/* Certifique-se de que este bloco seja adicionado APÓS os estilos gerais de .category-card e .category-card.image-card */
+
+body.metalized-colors-page .category-grid {
+  /* Pode ajustar o grid especificamente para esta página se precisar de espaçamento diferente */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Mantém 3 colunas em telas maiores */
+  gap: 20px; /* Espaçamento entre os cards */
+}
+
+.category-card.metalized-card {
+  cursor: pointer; /* Indica que é clicável/interativo */
+  width: 250px; /* Largura fixa do card, ajuste conforme o seu design */
+  height: 250px; /* Altura fixa do card, ajuste conforme o seu design */
+  overflow: hidden; /* Garante que o conteúdo não transborde */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0px 20px 0px; /* Espaçamento interno, ajuste conforme necessário */
+  box-sizing: border-box; /* Inclui padding na largura/altura total */
+}
+
+.category-card.metalized-card img {
+  max-width: 100%;
+  max-height: 100%; /* Permite que a imagem ocupe o máximo de espaço possível */
+  height: auto;
+  object-fit: cover; /* A imagem preenche o espaço, cortando se necessário (para as miniaturas estáticas) */
+  display: block;
+  transition: transform 0.3s ease-in-out; /*Transição para o efeito de zoom ao passar o mouse, opcional */
+}
+
+/* Opcional: Efeito de zoom leve ao passar o mouse */
+.category-card.metalized-card:hover img {
+  transform: scale(1.05); /* Um pequeno zoom */
+}
+
+/* Os estilos .lightbox-overlay e .lightbox-img já existentes no seu style.css continuarão funcionando,
+   mas não serão acionados pelos 'metalized-card' porque o JS não estará escutando cliques neles para o lightbox. */
+
+/* --- ESTILOS DO LIGHTBOX (MODAL DE IMAGEM) --- */
+.lightbox-overlay {
+  display: none; /* Esconde a lightbox por padrão */
+  position: fixed; /* Fixa na tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente */
+  /* REMOVA A LINHA 'display: flex;' DAQUI */
+  justify-content: center; /* Mantenha estes */
+  align-items: center; /* Mantenha estes */
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+  opacity: 0; /* Começa invisível para transição */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.lightbox-overlay.active {
+  display: flex; /* Mostra o overlay APENAS quando a classe 'active' está presente */
+  opacity: 1; /* Torna visível */
+}
+
+/* Mantenha o restante do seu CSS da lightbox inalterado */
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 80vh;
+  display: block;
+  border-radius: 4px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  z-index: 1001;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close:hover {
+  color: #ccc;
+}
+
+.category-card.image-card {
+  cursor: pointer;
 }
 
 /* Para telas maiores que 992px, as 4 colunas deverão aparecer lado a lado.
    Se a tela for menor, começaremos a ajustar. */
-@media (max-width: 992px) { /* Ex: Quebra de 4 para 2 colunas */
-    .footer-content {
-        justify-content: center; /* Centraliza as seções quando elas começam a quebrar */
-        gap: 20px; /* Reduz o gap entre as seções */
-    }
+@media (max-width: 992px) {
+  /* Ex: Quebra de 4 para 2 colunas */
+  .footer-content {
+    justify-content: center; /* Centraliza as seções quando elas começam a quebrar */
+    gap: 20px; /* Reduz o gap entre as seções */
+  }
 
-    .footer-section {
-        min-width: 300px; /* Aumenta um pouco a largura mínima para 2 colunas */
-        width: 45%; /* Cada seção ocupa quase metade da largura */
-    }
+  .footer-section {
+    min-width: 300px; /* Aumenta um pouco a largura mínima para 2 colunas */
+    width: 45%; /* Cada seção ocupa quase metade da largura */
+  }
 
-    .category-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 ou 3 colunas em tablets */
-        gap: 20px;
-    }
+  .category-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 ou 3 colunas em tablets */
+    gap: 20px;
+  }
 
-    .main-title {
-        font-size: 2em;
-    }
+  .main-title {
+    font-size: 2em;
+  }
 
-    .main-description {
-        font-size: 1.1em;
-    }
+  .main-description {
+    font-size: 1.1em;
+  }
 }
 
 /* Estilos para responsividade básica */
 @media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column; /* Empilha todas as seções verticalmente */
-        align-items: center; /* Centraliza as seções empilhadas */
-        text-align: center; /* Centraliza o texto em todas as seções */
-        gap: 30px; /* Espaço entre as seções principais empilhadas */
-    }
+  .footer-content {
+    flex-direction: column; /* Empilha todas as seções verticalmente */
+    align-items: center; /* Centraliza as seções empilhadas */
+    text-align: center; /* Centraliza o texto em todas as seções */
+    gap: 30px; /* Espaço entre as seções principais empilhadas */
+  }
 
-    .footer-section {
-        width: 90%; /* As seções ocupam 90% da largura em mobile */
-        min-width: unset; /* Remove o min-width para mais flexibilidade em mobile */
-        padding: 0; /* Ajuste o padding para não criar muito espaço */
-    }
+  .footer-section {
+    width: 90%; /* As seções ocupam 90% da largura em mobile */
+    min-width: unset; /* Remove o min-width para mais flexibilidade em mobile */
+    padding: 0; /* Ajuste o padding para não criar muito espaço */
+  }
 
-    .footer-section h2 {
-        border-bottom: none;
-        padding-bottom: 0;
-        text-align: center;
-    }
+  .footer-section h2 {
+    border-bottom: none;
+    padding-bottom: 0;
+    text-align: center;
+  }
 
-    .footer-section.about .contact-info .contact-link {
-        justify-content: center; /* Centraliza ícone e texto do contato em mobile */
-    }
+  .footer-section.about .contact-info .contact-link {
+    justify-content: center; /* Centraliza ícone e texto do contato em mobile */
+  }
 
-    .social-media a {
-        margin: 0 8px;
-    }
+  .social-media a {
+    margin: 0 8px;
+  }
 
-    .footer-section.links ul li a,
-    .footer-section.contact ul li a {
-        padding: 5px 0; /* Ajusta padding para links em mobile */
-    }
+  .footer-section.links ul li a,
+  .footer-section.contact ul li a {
+    padding: 5px 0; /* Ajusta padding para links em mobile */
+  }
 
-    .footer-section.hours p {
-        text-align: center;
-    }
+  .footer-section.hours p {
+    text-align: center;
+  }
 
-    .footer-bottom {
-        text-align: center;
-    }
+  .footer-bottom {
+    text-align: center;
+  }
 
-    #main-header {
-        flex-direction: column; /* Empilha logo e menu em telas menores */
-        align-items: center; /* Centraliza os itens */
-        padding: 10px; /* */
-    }
+  #main-header {
+    flex-direction: column; /* Empilha logo e menu em telas menores */
+    align-items: center; /* Centraliza os itens */
+    padding: 10px; /* */
+  }
 
-    .logo-link {
-        margin-right: 0; /* Remove margem lateral em mobile */
-        margin-bottom: 10px; /* Espaço entre o logo e o menu em telas menores */
-    }
+  .logo-link {
+    margin-right: 0; /* Remove margem lateral em mobile */
+    margin-bottom: 10px; /* Espaço entre o logo e o menu em telas menores */
+  }
 
-    .main-nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .main-nav ul li {
-        margin: 5px 0;
-        width: 100%;
-        text-align: center;
-    }
+  .main-nav ul li {
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
+  }
 
-    .submenu {
-        position: static;
-        width: 100%;
-        background-color: #555;
-        box-shadow: none;
-        border-radius: 0;
-        /* Remover o posicionamento absoluto em mobile, já que é static */
-        left: auto;
-        transform: none;
-        text-align: center;
-        /* Centralizar os itens do submenu em mobile */
-    }
+  .submenu {
+    position: static;
+    width: 100%;
+    background-color: #555;
+    box-shadow: none;
+    border-radius: 0;
+    /* Remover o posicionamento absoluto em mobile, já que é static */
+    left: auto;
+    transform: none;
+    text-align: center;
+    /* Centralizar os itens do submenu em mobile */
+  }
 
-    .submenu li {
-        text-align: center;
-        /* Centralizar itens específicos do submenu em mobile */
-    }
+  .submenu li {
+    text-align: center;
+    /* Centralizar itens específicos do submenu em mobile */
+  }
 
-        .faq-section {
-        margin: 20px 10px;
-        padding: 15px;
-    }
+  .faq-section {
+    margin: 20px 10px;
+    padding: 15px;
+  }
 
-    .faq-main-title {
-        font-size: 1.8em;
-    }
+  .faq-main-title {
+    font-size: 1.8em;
+  }
 
-    .faq-description {
-        font-size: 0.95em;
-        margin-bottom: 20px;
-    }
+  .faq-description {
+    font-size: 0.95em;
+    margin-bottom: 20px;
+  }
 
-    .faq-question {
-        font-size: 1em;
-        padding: 10px 0;
-    }
+  .faq-question {
+    font-size: 1em;
+    padding: 10px 0;
+  }
 
-    .faq-answer {
-        padding: 0 10px;
-    }
+  .faq-answer {
+    padding: 0 10px;
+  }
 
-    .faq-question.active + .faq-answer {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
+  .faq-question.active + .faq-answer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
-    .category-grid {
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
-        gap: 20px;
-    }
+  .category-grid {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    gap: 20px;
+  }
 
-    .main-categories-section {
-        margin: 20px 15px; /* Margem ajustada para mobile */
-        padding: 15px;
-    }
+  .main-categories-section {
+    margin: 20px 15px; /* Margem ajustada para mobile */
+    padding: 15px;
+  }
 
-    .main-title {
-        font-size: 1.8em;
-    }
+  .main-title {
+    font-size: 1.8em;
+  }
 
-    .main-description {
-        font-size: 1em;
-    }
+  .main-description {
+    font-size: 1em;
+  }
 
-    .category-card img {
-        height: 180px; /* Altura ligeiramente menor para imagens em mobile */
-    }
+  .category-card img {
+    height: 180px; /* Altura ligeiramente menor para imagens em mobile */
+  }
 }
